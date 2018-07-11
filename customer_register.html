@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <style>
+    body
+    {
+      background-color: gainsboro;
+      column-fill: balance;
+    }
+
+    table
+    {
+      border-spacing: 25px;
+      column-fill: balance;
+      column-gap: 6px;
+      border-collapse:separate;
+      background-color: whitesmoke;
+    }
+
+    input
+    {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .inputText
+    {
+      width:80%;
+      display:inline-block;
+      border :1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .input.submit 
+    {
+       padding: 10px 15px;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px #999;
+    }
+    button 
+    {
+      padding: 10px 15px;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+    }
+
+    button:hover {background-color: #3e8e41}
+
+    button:active
+    {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+  </style>
+</head>
+<body>
+  <h1><center>REGISTER</center></h1>
+  <form onsubmit="" action="customer_registerdb.php" method="post" enctype="multipart/form-data">
+    <table align="center"> 
+      <tr>
+        <td>User name <i class="fa fa-user"></i>
+          <input type="text" name="name" placeholder="Enter Username" required = "yes">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Phone Number <i class="fa fa-phone"></i><input id="ph" name="mobileno" type="text" placeholder="Enter Phone Number" required = "yes">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          E-mail <i class="fa fa-envelope"></i><input id="email" name="email" type="email" placeholder="Enter E-mail" required = "yes">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Password<i class="fa fa-key"></i><input id="password" name="password" type="password" placeholder="Enter Password" required = "yes">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Confirm Password<i class="fa fa-key"></i>
+          <input id="cpassword" type="password" placeholder="Re-enter Password" required = "yes">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div align="center">
+            <input type="submit" name="submit" value="Register" onclick="validate()">
+              <!--<a href="index.html" style="color:whitesmoke "></a>-->
+          </div>
+        </td>  
+      </tr>
+    </table>
+  </form>
+</body>
+<script>
+	function validate() {
+		var pas = document.getElementById('password');
+		var cpas = document.getElementById('cpassword');
+		if ( pas != cpas ) 
+		{
+			alert("enter correct same password");
+		}
+	}
+</script>
+</html>
